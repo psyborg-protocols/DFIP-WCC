@@ -68,7 +68,7 @@
       content:"";
       position:fixed;
       inset:0;
-      background-image:url('https://images.unsplash.com/photo-1545464333-9f338f5f0c47?q=80&w=1600&auto=format&fit=crop'); /* <-- Replace or remove */
+      background-image:url('wcc_background.jpg');
       background-size:cover;
       background-position:center;
       filter:brightness(0.9) saturate(1.05);
@@ -176,14 +176,7 @@
             </div>
         </div>
 
-        <div id="panel-measure" class="hidden grid grid-cols-1 sm:grid-cols-2 gap-4 items-end border-t border-base-200 pt-6">
-          <div class="relative sm:col-span-2">
-             <p class="text-sm">
-                <button type="button" id="btnWeightMode" class="text-accent-700 hover:underline font-medium">
-                    ← Back to using actual weight
-                </button>
-            </p>
-          </div>
+        <div id="panel-measure" class="hidden grid grid-cols-1 sm:grid-cols-2 gap-4 items-end">
           <div class="relative">
             <label for="hg" class="flex items-center gap-2 text-sm font-medium text-base-700">
               Heartgirth (HG)
@@ -226,6 +219,13 @@
               <output id="estWeight" class="text-2xl font-bold text-base-800">—</output>
               <span class="text-sm text-base-600">lb</span>
             </div>
+          </div>
+           <div class="relative sm:col-span-2">
+             <p class="text-sm mt-2">
+                <button type="button" id="btnWeightMode" class="text-accent-700 hover:underline font-medium">
+                    ← Back to using actual weight
+                </button>
+            </p>
           </div>
         </div>
 
@@ -342,12 +342,12 @@
                     <button type="button" class="info-btn relative -top-px" data-pop="pop-formula" aria-label="Explain Formula">
                         <svg viewBox="0 0 24 24" class="w-4 h-4 text-base-600"><circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.1"/><path d="M11 10h2v6h-2v-6Zm0-3h2v2h-2V7Z" fill="currentColor"/></svg>
                     </button>
-                    <div id="pop-formula" class="popover hidden-vis right-0 top-6 bg-white border border-base-200 rounded-lg p-3 text-sm shadow-soft max-w-xs w-72">
+                    <div id="pop-formula" class="popover hidden-vis right-0 bottom-8 bg-white border border-base-200 rounded-lg p-3 text-sm shadow-soft max-w-xs w-72">
                         <p class="text-xs text-left text-base-600 mb-2">Full calculation formula:</p>
-                        <div class="text-left text-xs break-words">
+                        <div class="text-left text-xs">
                         $$ \text{WCC} = \text{Wt} \times 0.20 \times \Big(1 - \sum R \Big) $$
                         <p class="text-xs text-left text-base-600 mt-2">Where the sum of reductions <span class="font-mono">∑ R</span> is:</p>
-                        $$ \tfrac{|5-\text{BCS}|}{10} + \tfrac{|\text{1-MASS}|}{10} + \tfrac{\text{ASYM}}{10} + (0.25 \cdot \text{FIT}) + (0.25 \cdot \text{MED}) $$
+                        $$ \begin{gathered} \tfrac{|5-\text{BCS}|}{10} + \tfrac{|\text{1-MASS}|}{10} + \tfrac{\text{ASYM}}{10} \\ + (0.25 \cdot \text{FIT}) + (0.25 \cdot \text{MED}) \end{gathered} $$
                         </div>
                     </div>
                 </div>
@@ -712,6 +712,10 @@
   </footer>
 </body>
 </html>
+
+
+
+
 
 
 
