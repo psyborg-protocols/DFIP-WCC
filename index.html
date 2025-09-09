@@ -267,7 +267,7 @@
 
                 <div id="asymGroup" class="relative">
                     <label for="asym" class="flex items-center gap-2 text-sm font-medium text-base-700">
-                    Gait Symmetry (during fitness test)
+                    Gait Asymmetry (during fitness test)
                     <button type="button" class="info-btn relative" data-pop="pop-asym" aria-label="Explain Asymmetry">
                         <svg viewBox="0 0 24 24" class="w-4 h-4 text-base-600"><circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.1"/><path d="M11 10h2v6h-2v-6Zm0-3h2v2h-2V7Z" fill="currentColor"/></svg>
                     </button>
@@ -336,8 +336,21 @@
                 <p class="text-sm text-base-600">Total Reductions</p>
                 <p id="adjPctOut" class="text-xl font-semibold text-base-800">—</p>
               </div>
-              <div class="text-right flex-grow">
-                <p class="text-sm text-base-600">Recommended Limit</p>
+              <div class="text-right flex-grow relative">
+                <div class="flex items-center justify-end gap-2">
+                    <p class="text-sm text-base-600">Recommended Limit</p>
+                    <button type="button" class="info-btn relative -top-px" data-pop="pop-formula" aria-label="Explain Formula">
+                        <svg viewBox="0 0 24 24" class="w-4 h-4 text-base-600"><circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.1"/><path d="M11 10h2v6h-2v-6Zm0-3h2v2h-2V7Z" fill="currentColor"/></svg>
+                    </button>
+                    <div id="pop-formula" class="popover hidden-vis right-0 top-6 bg-white border border-base-200 rounded-lg p-3 text-sm shadow-soft max-w-xs w-72">
+                        <p class="text-xs text-left text-base-600 mb-2">Full calculation formula:</p>
+                        <div class="text-left text-xs break-words">
+                        $$ \text{WCC} = \text{Wt} \times 0.20 \times \Big(1 - \sum R \Big) $$
+                        <p class="text-xs text-left text-base-600 mt-2">Where the sum of reductions <span class="font-mono">∑ R</span> is:</p>
+                        $$ \tfrac{|5-\text{BCS}|}{10} + \tfrac{|\text{1-MASS}|}{10} + \tfrac{\text{ASYM}}{10} + (0.25 \cdot \text{FIT}) + (0.25 \cdot \text{MED}) $$
+                        </div>
+                    </div>
+                </div>
                 <p id="wccOut" class="text-2xl md:text-3xl font-extrabold text-accent-700">—</p>
               </div>
             </div>
@@ -363,13 +376,6 @@
             </div>
           </div>
 
-          <div class="mt-4 p-4 rounded-lg bg-white border border-base-200">
-            <p class="text-xs text-base-600 mb-2">Formula Summary:</p>
-            <div class="prose max-w-none text-center">
-              <div>$$ \text{WCC} = \underbrace{(\text{Weight} \times 0.20)}_{\text{Baseline}} \times \Big(1 - \sum \text{Reductions}\Big) $$</div>
-              <p class="text-xs text-base-600 mt-1">Where <span class="font-mono">∑ Reductions</span> is the sum of fractional deductions from all adjustment factors.</p>
-            </div>
-          </div>
         </div>
       </form>
     </section>
@@ -706,5 +712,6 @@
   </footer>
 </body>
 </html>
+
 
 
