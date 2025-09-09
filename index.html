@@ -68,7 +68,7 @@
       content:"";
       position:fixed;
       inset:0;
-      background-image:url('wcc_background.jpg');
+      background-image:url('your-image.jpg'); /* <-- Replace with your image file */
       background-size:cover;
       background-position:center;
       filter:brightness(0.9) saturate(1.05);
@@ -265,24 +265,6 @@
                     <div class="flex justify-between text-xs text-base-600"><span>1</span><span id="massVal" class="font-medium text-base-800">1</span><span>4</span></div>
                 </div>
 
-                <div id="asymGroup" class="relative">
-                    <label for="asym" class="flex items-center gap-2 text-sm font-medium text-base-700">
-                    Gait Asymmetry (during fitness test)
-                    <button type="button" class="info-btn relative" data-pop="pop-asym" aria-label="Explain Asymmetry">
-                        <svg viewBox="0 0 24 24" class="w-4 h-4 text-base-600"><circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.1"/><path d="M11 10h2v6h-2v-6Zm0-3h2v2h-2V7Z" fill="currentColor"/></svg>
-                    </button>
-                    <div id="pop-asym" class="popover hidden-vis left-0 top-6 bg-white border border-base-200 rounded-lg p-3 text-sm shadow-soft">
-                      <p class="mb-2">Assess gait <em>during the fitness test</em>. Mark asymmetry if irregularities are visible at trot (1) or at walk &amp; trot (2).</p>
-                      <p class="text-xs"><a href="https://example.com/symmetry-guide" target="_blank" class="text-accent-700 underline">Symmetry how-to (placeholder)</a></p>
-                    </div>
-                    </label>
-                    <select id="asym" class="w-full rounded-lg border-base-300 focus:ring-accent-500 focus:border-accent-500 border px-3 py-2 mt-1">
-                      <option value="0">0 — None</option>
-                      <option value="1">1 — Trot only</option>
-                      <option value="2">2 — Walk & trot</option>
-                    </select>
-                </div>
-
                 <div id="fitnessGroup" class="relative">
                     <label for="fit" class="flex items-center gap-2 text-sm font-medium text-base-700">
                     Overall Fitness (from field test)
@@ -302,6 +284,24 @@
                         <input type="radio" name="fit" value="1" class="accent-accent-600"> Poor
                       </label>
                     </div>
+                </div>
+
+                <div id="asymGroup" class="relative">
+                    <label for="asym" class="flex items-center gap-2 text-sm font-medium text-base-700">
+                    Gait Asymmetry (during fitness test)
+                    <button type="button" class="info-btn relative" data-pop="pop-asym" aria-label="Explain Asymmetry">
+                        <svg viewBox="0 0 24 24" class="w-4 h-4 text-base-600"><circle cx="12" cy="12" r="10" fill="currentColor" opacity="0.1"/><path d="M11 10h2v6h-2v-6Zm0-3h2v2h-2V7Z" fill="currentColor"/></svg>
+                    </button>
+                    <div id="pop-asym" class="popover hidden-vis left-0 top-6 bg-white border border-base-200 rounded-lg p-3 text-sm shadow-soft">
+                      <p class="mb-2">Assess gait <em>during the fitness test</em>. Mark asymmetry if irregularities are visible at trot (1) or at walk &amp; trot (2).</p>
+                      <p class="text-xs"></p>
+                    </div>
+                    </label>
+                    <select id="asym" class="w-full rounded-lg border-base-300 focus:ring-accent-500 focus:border-accent-500 border px-3 py-2 mt-1">
+                      <option value="0">0 — None</option>
+                      <option value="1">1 — Trot only</option>
+                      <option value="2">2 — Walk & trot</option>
+                    </select>
                 </div>
 
                 <div class="relative sm:col-span-2">
@@ -519,12 +519,12 @@
     },
     {
       title: "2) Understand & Set BCS (1–9)",
-      body: "BCS rates <strong>fat cover</strong>, not muscle. Palpate and look at six zones: neck, withers, behind the shoulder, ribs, loin, and tailhead. Aim for <strong>around 5</strong> for a generally fit horse; each point away from 5 reduces the load limit in this tool. For a step‑by‑step visual guide, open the OSU Ohioline page (great for owners and techs). <br><a href='https://ohioline.osu.edu/factsheet/as-1024' target='_blank' class='text-accent-700 underline'>Learn BCS (OSU Ohioline)</a>",
+      body: "BCS rates <strong>fat cover</strong>, not muscle. Palpate and look at six zones: neck, withers, behind the shoulder, ribs, loin, and tailhead. Aim for <strong>around 5</strong> for a generally fit horse; each point away from 5 reduces the load limit in this tool. For a step‑by‑step visual guide, open the OSU Ohioline page. <br><a href='https://ohioline.osu.edu/factsheet/as-1024' target='_blank' class='text-accent-700 underline'>Learn BCS (OSU Ohioline)</a>",
       target: '#bcsGroup'
     },
     {
       title: "3) Understand & Set MASS (1–4)",
-      body: "MASS detects <strong>muscle loss</strong> by region (neck, back, hindquarters). <strong>1 = none</strong>, <strong>4 = severe</strong>. Score both sides and note differences—this helps distinguish generalized loss from unilateral issues. Higher MASS (more atrophy) reduces the load limit more in this calculator. For an owner‑friendly picture guide, use this resource: <br><a href='https://www.spillers-feeds.com/muscle-wastage-scoring-guide' target='_blank' class='text-accent-700 underline'>MASS guide (visual)</a>",
+      body: "MASS detects <strong>muscle loss</strong> by region (neck, back, hindquarters). <strong>1 = none</strong>, <strong>4 = severe</strong>. Score both sides and note differences—this helps distinguish generalized loss from unilateral issues. Higher MASS (more atrophy) reduces the load limit more in this calculator. For a picture guide, use this resource: <br><a href='https://www.spillers-feeds.com/muscle-wastage-scoring-guide' target='_blank' class='text-accent-700 underline'>MASS guide (visual)</a>",
       target: '#massGroup'
     },
     {
@@ -712,6 +712,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
